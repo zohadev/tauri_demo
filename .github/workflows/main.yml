@@ -38,9 +38,10 @@ jobs:
           node-version: 'lts/*'
           cache: 'npm' # Set this to npm, yarn or pnpm.
 
-      - name: Install app dependencies and build app
+      - name: Install app dependencies
         # Remove `&& yarn build` if you build your frontend in `beforeBuildCommand`
         run: npm i # Change this to npm, yarn or pnpm.
+      - name: Build the app
         run: npm run tauri build
 
       - name: Push to Releases
