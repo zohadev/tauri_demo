@@ -36,7 +36,7 @@ jobs:
       - name: Install app dependencies and build web
         # Remove `&& yarn build` if you build your frontend in `beforeBuildCommand`
         run: npm i # Change this to npm, yarn or pnpm.
-      -name: Build the app
+      - name: Build the app
         run: npm run tauri build
 
       - name: Push to Releases
