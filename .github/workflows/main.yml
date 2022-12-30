@@ -1,16 +1,18 @@
 name: Release
+
 on:
   push:
     tags:
       - 'v*'
-  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Install dependencies (ubuntu only)
         run: |
@@ -41,4 +43,4 @@ jobs:
         uses: ncipollo/release-action@v1.11.1
         with:
           artifacts: "src-tauri/target/release/bundle/deb/*, src-tauri/target/release/bundle/appimage/*"    
-          token: ${{ secrets.YOUR_GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
