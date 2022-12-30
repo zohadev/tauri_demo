@@ -7,7 +7,7 @@
   },
   "package": {
     "productName": "tauri_demo",
-    "version": "0.0.0"
+    "version": "1.0.2"
   },
   "tauri": {
     "allowlist": {
@@ -28,7 +28,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauridemo.dev",
+      "identifier": "com.tauridemo.app",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
