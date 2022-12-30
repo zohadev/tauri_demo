@@ -2,7 +2,7 @@ name: Release
 on:
   push:
     tags:
-      - '*'
+      - 'none*'
   workflow_dispatch:
 
 jobs:
